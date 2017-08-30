@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row" *ngFor="let i of rows">
+        <div class="col s4" *ngFor="let makeup of makeups | slice:(i*itemsPerRow):(i+1)*itemsPerRow">
+              <div class="card">
+                <div class="card-image">
+                    <img src="assets/Makeup/{{ makeup.link }}">
+                    <span class="card-title"> {{ makeup.name }}</span>
+                </div>
+                <div class="card-content">
+                  <p>{{ makeup.name }}</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">Ver Imagen</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
